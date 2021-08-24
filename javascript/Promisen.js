@@ -48,18 +48,20 @@ const sortWords = words => {
     }
   });
 };
+const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];
+const complicatedArray = ['cucumber', 44, true];
 
-const theseAreWords = ['promise', 'practice', 'break'];
+// call both functions, chain them together and log the result to the console
 
-makeAllCaps(theseAreWords)
-  .then(sortWords(theseAreWords))
+makeAllCaps(arrayOfWords)
+  .then(sortWords(arrayOfWords))
   .then(result => console.log(result))
   .catch(error => console.log(error));
 
-const theseAreNotWords = [1, 'hello', 9];
 
-makeAllCaps(theseAreNotWords)
-  .then(sortWords(theseAreNotWords))
+
+makeAllCaps(complicatedArray)
+  .then(sortWords(complicatedArray))
   .then(result => console.log(result))
   .catch(error => console.log(error));
   
